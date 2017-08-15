@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, DatePicker, Button, Table, Icon, Row, Col } from 'antd';
+import { Select, DatePicker, Button, Table, Icon, Row, Col, Pagination } from 'antd';
 import styles from './StatementListPanel.css';
 import { MOCK_STATEMENTS } from '../../utils/constants';
 
@@ -73,15 +73,17 @@ class StatementListPanel extends React.Component {
   }
 
   render() {
+    const tablePagination = (
+      <Pagination pageSize={25} />
+    );
     return (
       <div className={styles.normal}>
-        <Row gutter={16}>
+        <Row gutter={16} className={styles.controlPanel} >
           <Col span={6}>
             <Select defaultValue="lucy" style={{ width: 120 }} onChange={this.onFranchiseeChange}>
-              <Option value="jack">Jack</Option>
-              <Option value="lucy">Lucy</Option>
-              <Option value="disabled" disabled>Disabled</Option>
-              <Option value="Yiminghe">yiminghe</Option>
+              <Option value="jack">净悦加盟商</Option>
+              <Option value="lucy">测试加盟商</Option>
+              <Option value="Yiminghe">Demo加盟商</Option>
             </Select>
           </Col>
 
@@ -94,9 +96,13 @@ class StatementListPanel extends React.Component {
           </Col>
         </Row>
 
-        <div>
-          <Table columns={columns} dataSource={MOCK_STATEMENTS} />
-        </div>
+        <Row>
+          <Table
+            pagination={tablePagination}
+            columns={columns}
+            dataSource={MOCK_STATEMENTS}
+          />
+        </Row>
       </div>
     );
   }
