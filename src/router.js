@@ -6,6 +6,7 @@ import BillApp from './routes/BillApp.js';
 
 import StatementApp from './routes/statements/StatementApp.js';
 import StatementList from './routes/statements/StatementList.js';
+import StatementDetail from './routes/statements/StatementDetail.js';
 
 function RouterConfig({ history }) {
   return (
@@ -14,6 +15,7 @@ function RouterConfig({ history }) {
       <Route path="/bill" component={BillApp} >
         <Route path="statement" component={StatementApp} >
           <Route path="list" component={StatementList} />
+          <Route path="detail/:stationId" component={StatementDetail} />
         </Route>
       </Route>
     </Router>
