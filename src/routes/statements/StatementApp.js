@@ -1,12 +1,15 @@
 import React from 'react';
 import { connect } from 'dva';
 import styles from './StatementApp.css';
+import MainLayout from '../../components/MainLayout/MainLayout';
 
 function StatementApp({ children }) {
   return (
-    <div className={styles.normal}>
-      {children}
-    </div>
+    <MainLayout>
+      <div className={styles.normal}>
+        {children}
+      </div>
+    </MainLayout>
   );
 }
 

@@ -8,10 +8,15 @@ class MainLayout extends React.Component {
   state = {
     collapsed: false,
   };
+
   toggle = () => {
     this.setState({
       collapsed: !this.state.collapsed,
     });
+  }
+
+  handleMenuClick= (e) => {
+    console.log('click ', e);
   }
 
   render() {
@@ -23,14 +28,23 @@ class MainLayout extends React.Component {
           collapsed={this.state.collapsed}
         >
           <div className={styles.logo} />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+          <Menu
+            theme="dark"
+            mode="inline"
+            defaultSelectedKeys={['1']}
+            onClick={this.handleMenuClick}
+          >
             <Menu.Item key="1">
-              <Icon type="pie-chart" />
-              <span>对账账单</span>
+              <a href="/bill/statement/list">
+                <Icon type="pie-chart" />
+                <span>对账账单</span>
+              </a>
             </Menu.Item>
             <Menu.Item key="2">
-              <Icon type="pie-chart" />
-              <span>分账账单</span>
+              <a href="/bill/statement/partition">
+                <Icon type="pie-chart" />
+                <span>分账账单</span>
+              </a>
             </Menu.Item>
             <Menu.Item key="3">
               <Icon type="upload" />
