@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'dva';
-import styles from './StatementApp.css';
+import styles from './PartitionApp.css';
 
-function StatementApp({ children }) {
+function PartitionApp({ children }) {
   return (
     <div className={styles.normal}>
       {children}
@@ -14,4 +14,4 @@ function mapStateToProps() {
   return {};
 }
 
-export default connect(mapStateToProps)(StatementApp);
+export default connect(mapStateToProps)(PartitionApp);

@@ -41,7 +41,7 @@ class MainLayout extends React.Component {
               </a>
             </Menu.Item>
             <Menu.Item key="2">
-              <a href="/bill/statement/list">
+              <a href="/bill/partition/list">
                 <Icon type="pie-chart" />
                 <span>分账账单</span>
               </a>

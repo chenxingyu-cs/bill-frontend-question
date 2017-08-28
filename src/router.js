@@ -8,6 +8,9 @@ import StatementApp from './routes/statements/StatementApp.js';
 import StatementList from './routes/statements/StatementList.js';
 import StatementDetail from './routes/statements/StatementDetail.js';
 
+import PartitionApp from './routes/PartitionApp.js';
+import PartitionList from './routes/PartitionList.js';
+
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
@@ -16,6 +19,9 @@ function RouterConfig({ history }) {
         <Route path="statement" component={StatementApp} >
           <Route path="list" component={StatementList} />
           <Route path="detail/:stationId" component={StatementDetail} />
+        </Route>
+        <Route path="partition" component={PartitionApp} >
+          <Route path="list" component={PartitionList} />
         </Route>
       </Route>
     </Router>
