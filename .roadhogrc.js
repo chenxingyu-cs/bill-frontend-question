@@ -1,6 +1,13 @@
 
 export default {
   entry: 'src/index.js',
+  "proxy": {
+    "/api": {
+      "target": "http://wxgzhpaytest.maxtropy.com",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api" : "" }
+    },
+  },
   env: {
     development: {
       extraBabelPlugins: [

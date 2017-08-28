@@ -1,7 +1,6 @@
 import React from 'react';
 import { Select, DatePicker, Button, Table, Icon, Row, Col, Pagination } from 'antd';
 import styles from './StatementListPanel.css';
-import { MOCK_STATEMENTS } from '../../utils/constants';
 
 const Option = Select.Option;
 const RangePicker = DatePicker.RangePicker;
@@ -73,9 +72,6 @@ class StatementListPanel extends React.Component {
   }
 
   render() {
-    const tablePagination = (
-      <Pagination pageSize={25} />
-    );
     return (
       <div className={styles.normal}>
         <Row gutter={16} className={styles.controlPanel} >
@@ -98,9 +94,15 @@ class StatementListPanel extends React.Component {
 
         <Row>
           <Table
-            pagination={tablePagination}
+            pagination={false}
             columns={columns}
-            dataSource={MOCK_STATEMENTS}
+            rowKey={record => record.id}
+            dataSource={this.props.statements}
+          />
+          <Pagination
+            pageSize={10}
+            total={21}
+            current={1}
           />
         </Row>
       </div>

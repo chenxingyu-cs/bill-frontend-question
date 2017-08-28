@@ -3,16 +3,27 @@ import { connect } from 'dva';
 import styles from './StatementList.css';
 import StatementListPanel from '../../components/Statements/StatementListPanel';
 
-function StatementList() {
-  return (
-    <div className={styles.normal}>
-      <StatementListPanel />
-    </div>
-  );
+class StatementList extends React.Component {
+  componentWillMount() {
+    this.props.dispatch({
+      type: 'statements/fetch',
+      payload: {
+        page: 1,
+      },
+    });
+  }
+
+  render() {
+    return (
+      <div className={styles.normal}>
+        <StatementListPanel statements={this.props.list} />
+      </div>
+    );
+  }
 }
 
-function mapStateToProps() {
-  return {};
+function mapStateToProps(state) {
+  return state.statements;
 }
 
 export default connect(mapStateToProps)(StatementList);

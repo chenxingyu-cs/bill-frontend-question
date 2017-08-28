@@ -1,3 +1,4 @@
+export const HOST_URL = 'http://wxgzhpaytest.maxtropy.com';
 
 export const MOCK_STATEMENTS = [
   {
@@ -86,7 +87,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 1,   // stationId
+    id: 11,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -100,7 +101,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 2,   // stationId
+    id: 21,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -114,7 +115,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 7,   // stationId
+    id: 71,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -128,7 +129,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 3,   // stationId
+    id: 31,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -142,7 +143,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 4,   // stationId
+    id: 14,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -156,7 +157,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 5,   // stationId
+    id: 51,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -170,7 +171,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 1,   // stationId
+    id: 132,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -184,7 +185,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 2,   // stationId
+    id: 432,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -198,7 +199,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 7,   // stationId
+    id: 547,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -212,7 +213,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 3,   // stationId
+    id: 365,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -226,7 +227,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 4,   // stationId
+    id: 544,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
@@ -240,7 +241,7 @@ export const MOCK_STATEMENTS = [
     date: '2017-07-02',
   },
   {
-    id: 5,   // stationId
+    id: 543,   // stationId
     stationName: 'Test Station',
     isBalanced: true,
     expectedIncome: 100.9,
